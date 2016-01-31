@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "new-cap": 0
+  },
+  globals: {
+    "__DEBUG__": false,
+    "__PRODUCTION__": false
+  },
+  "extends": "airbnb"
+}

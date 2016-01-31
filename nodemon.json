@@ -1,0 +1,11 @@
+{
+  "verbose": false,
+  "ignore": [
+    "build/*.js",
+    "build/*.json",
+    "src/shared/**/*.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
