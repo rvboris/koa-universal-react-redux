@@ -1,7 +1,7 @@
 import { renderToString } from 'react-dom/server';
 import { RouterContext, match } from 'react-router';
 import { Provider } from 'react-redux';
-import { routeActions } from 'react-router-redux';
+import { push } from 'react-router-redux';
 import createLocation from 'history/lib/createLocation';
 import React from 'react';
 
@@ -51,7 +51,7 @@ export default async(ctx) => {
     assets = require('../webpack-stats.json');
   }
 
-  store.dispatch(routeActions.push(ctx.request.url));
+  store.dispatch(push(ctx.request.url));
 
   await fetcher(store.dispatch, renderProps.components, renderProps.params);
 

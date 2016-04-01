@@ -11,6 +11,10 @@ class HomePage extends Component {
     dispatch: PropTypes.func.isRequired,
   };
 
+  static needs = [
+    timeActions,
+  ];
+
   constructor(props) {
     super(props);
 
@@ -19,12 +23,8 @@ class HomePage extends Component {
     }, 1000);
   }
 
-  static needs = [
-    timeActions,
-  ];
-
   render() {
-    return (<Time time={ this.props.time }/>);
+    return (<Time time={ this.props.time } />);
   }
 }
 

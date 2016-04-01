@@ -1,11 +1,9 @@
 import React, { PropTypes } from 'react';
 
-export default class App extends React.Component {
-  static propTypes = {
-    children: PropTypes.object,
-  };
+const app = (props) => (<div id="app">{props.children}</div>);
 
-  render() {
-    return (<div id="app">{this.props.children}</div>);
-  }
-}
+app.propTypes = {
+  children: PropTypes.object,
+};
+
+export default app;

@@ -1,12 +1,10 @@
 import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
-export default class Time extends React.Component {
-  static propTypes = {
-    time: ImmutablePropTypes.map.isRequired,
-  };
+const time = (props) => (<span>{ props.time.get('time') }</span>);
 
-  render() {
-    return (<span>{ this.props.time.get('time') }</span>);
-  }
-}
+time.propTypes = {
+  time: ImmutablePropTypes.map.isRequired,
+};
+
+export default time;

@@ -6,6 +6,6 @@ import Home from './containers/Home';
 
 export default (
   <Route name="app" component={App} path="/">
-      <IndexRoute component={Home}/>
+      <IndexRoute component={Home} />
   </Route>
 );

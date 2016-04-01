@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
 import { Provider } from 'react-redux';
 
 import routes from '../shared/routes';
-import store from './store';
+import store, { history } from './store';
 
 render(
   <Provider store={store}>
-    <Router children={routes} history={browserHistory} />
+    <Router children={routes} history={history} />
   </Provider>,
   document.getElementById('body')
 );

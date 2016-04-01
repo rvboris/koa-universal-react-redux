@@ -5,6 +5,9 @@ import { config } from '../env';
 const TIME_API = `${config.apiUrl}/time`;
 
 export default createAction('GET_TIME',
-  () => ({ promise: request.get(TIME_API) }),
-  () => ({ optimist: true })
+  null,
+  () => ({
+    optimist: true,
+    promise: request.get(TIME_API),
+  })
 );
